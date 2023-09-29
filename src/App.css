@@ -1,0 +1,10 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+main.main-section {
+  min-height: calc(100vh - 195px);
+  background: linear-gradient(to bottom, #7761cd, #889eef);
+  padding: 32px;
+}
