@@ -1,11 +1,4 @@
-export interface TodoObject {
-  id: number,
-  title: string,
-  description: string,
-  is_complete: boolean,
-  created_at: string,
-  updated_at: string,
-}
+import { TodoObject } from "./@types/todo";
 
 export const allTodos: Array<TodoObject> = [
   {

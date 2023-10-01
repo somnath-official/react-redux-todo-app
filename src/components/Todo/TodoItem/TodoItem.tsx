@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import './TodoItem.css'
-import { TodoObject } from "../../../todos"
+import { TodoObject } from "../../../@types/todo"
 
 export interface TodoItemIntrface {
   todo: TodoObject

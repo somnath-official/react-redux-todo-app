@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import './Todo.css'
-import { TodoObject, allTodos } from '../../todos'
+import { allTodos } from '../../todos'
 import TodoItem from './TodoItem/TodoItem'
+import { TodoObject } from '../../@types/todo'
 
 const Todo = () => {
   const [todos, setTodos] = useState<Array<TodoObject>>([])
