@@ -1,0 +1,37 @@
+
+.todo-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  border-top: 1px solid #e7e7e7;
+  padding-top: 8px;
+}
+
+.todo-action button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 4px;
+}
+.todo-action button:last-child {
+  margin-right: 0px;
+}
+
+.todo-action .todo-date {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.todo-action svg.icon {
+  width: 15px;
+}
+
+p.todo-description {
+  margin-top: 16px;
+  font-size: 12px;
+  word-spacing: 4px;
+  color: #000000;
+  font-style: italic;
+  line-height: 20px;
+}

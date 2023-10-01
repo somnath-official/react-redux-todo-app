@@ -17,7 +17,7 @@
 }
 
 .todo-container {
-  padding: 32px 16px;
+  padding: 32px 0px;
   margin-top: 8px;
   border-radius: 4px;
 }
@@ -40,11 +40,11 @@
 
 .single-todo:after {
   content: '';
-  width: 8px;
+  width: 4px;
   height: 100%;
   background-color: red;
   position: absolute;
-  left: -8px;
+  left: -4px;
   top: 0;
 }
 
@@ -56,45 +56,19 @@
   font-size: 15px;
 }
 
-.todo-action {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 16px;
-  border-top: 1px solid #e7e7e7;
-  padding-top: 8px;
-}
-
-.todo-action button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 4px;
-}
-.todo-action button:last-child {
-  margin-right: 0px;
-}
-
-.todo-action .todo-date {
-  font-weight: 300;
-  font-size: 14px;
-}
-
-.todo-action svg.icon {
-  width: 15px;
-}
-
-p.todo-description {
-  margin-top: 16px;
-  font-size: 12px;
-  word-spacing: 4px;
-  color: #000000;
-}
-
 .completed .todo-title {
   color: #bbbbbb;
 }
 
 .completed .todo-description {
   color: #bbbbbb;
+}
+
+.no-todos {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
 }
