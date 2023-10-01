@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react'
 import './Todo.css'
-import { allTodos } from '../../todos'
 import TodoItem from './TodoItem/TodoItem'
 import { TodoObject } from '../../@types/todo'
+import type { RootState } from '../../store'
+import { useSelector } from 'react-redux'
 
 const Todo = () => {
   const [todos, setTodos] = useState<Array<TodoObject>>([])
+  const data = useSelector((state: RootState) => state.todo)
 
   useEffect(() => {
-    setTodos(allTodos)
-  }, [])
+    setTodos(data)
+  }, [data])
 
   return (
     <>
