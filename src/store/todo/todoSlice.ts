@@ -10,11 +10,12 @@ export const todoSlice = createSlice({
   initialState,
   reducers: {
     addTodo: (state, action: PayloadAction<CreateToDoObject>) => {
-      state.push({
+      state.unshift({
         id: +new Date(),
         title: action.payload.title,
         description: action.payload.description,
         is_complete: false,
+        is_deleted: false,
         created_at: new Date().toDateString(),
         updated_at: new Date().toDateString()
       })
@@ -23,11 +24,19 @@ export const todoSlice = createSlice({
       state.map((item) => {
         if (item.id === action.payload.id) item.is_complete = true
       })
+    },
+    deleteTodo: (state, action: PayloadAction<{id: number|undefined}>) => {
+      state.map((item) => {
+        if (item.id === action.payload.id) {
+          item.is_deleted = true
+          item.deleted_at = new Date().toDateString()
+        }
+      })
     }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { addTodo, completeTodo } = todoSlice.actions
+export const { addTodo, completeTodo, deleteTodo } = todoSlice.actions
 
 export default todoSlice.reducer
