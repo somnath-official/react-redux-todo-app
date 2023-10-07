@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import { CreateToDoObject, TodoObject } from '../../@types/todo'
+import { CreateToDoObject, TodoObject, UpdateToDoObject } from '../../@types/todo'
 import { allTodos } from '../../data/todos'
 
 const initialState: Array<TodoObject> = allTodos
@@ -19,6 +19,14 @@ export const todoSlice = createSlice({
         updated_at: new Date().toDateString()
       })
     },
+    updateTodo: (state, action: PayloadAction<UpdateToDoObject>) => {
+      state.map((item) => {
+        if (item.id === action.payload.id) {
+          item.title = action.payload.title
+          item.description = action.payload.description
+        }
+      })
+    },
     completeTodo: (state, action: PayloadAction<{id: number|undefined}>) => {
       state.map((item) => {
         if (item.id === action.payload.id) item.is_complete = true
@@ -34,6 +42,6 @@ export const todoSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { addTodo, completeTodo, deleteTodo } = todoSlice.actions
+export const { addTodo, completeTodo, deleteTodo, updateTodo } = todoSlice.actions
 
 export default todoSlice.reducer
