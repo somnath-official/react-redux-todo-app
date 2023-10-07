@@ -15,7 +15,6 @@ export const todoSlice = createSlice({
         title: action.payload.title,
         description: action.payload.description,
         is_complete: false,
-        is_deleted: false,
         created_at: new Date().toDateString(),
         updated_at: new Date().toDateString()
       })

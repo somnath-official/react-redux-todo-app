@@ -31,18 +31,16 @@ const Todo = () => {
             : <>
                 {
                   todos.map(todo => {
-                    if (!todo.is_deleted) {
-                      return (
-                        <div
-                          key={todo.id}
-                          className={
-                            `single-todo ${todo.is_complete ? 'completed' : ''}`
-                          }
-                        >
-                          <TodoItem todo={todo}/>
-                        </div>
-                      )
-                    }
+                    return (
+                      <div
+                        key={todo.id}
+                        className={
+                          `single-todo ${todo.is_complete ? 'completed' : ''}`
+                        }
+                      >
+                        <TodoItem todo={todo}/>
+                      </div>
+                    )
                   })
                 }
               </>
