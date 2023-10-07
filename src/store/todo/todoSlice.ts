@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { CreateToDoObject, TodoObject } from '../../@types/todo'
-import { allTodos } from '../../todos'
+import { allTodos } from '../../data/todos'
 
 const initialState: Array<TodoObject> = allTodos
 

@@ -1,4 +1,4 @@
-import { TodoObject } from "./@types/todo";
+import { TodoObject } from "../@types/todo";
 
 export const allTodos: Array<TodoObject> = [
   {
