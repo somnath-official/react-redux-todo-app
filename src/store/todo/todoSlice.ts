@@ -26,12 +26,10 @@ export const todoSlice = createSlice({
       })
     },
     deleteTodo: (state, action: PayloadAction<{id: number|undefined}>) => {
-      state.map((item) => {
-        if (item.id === action.payload.id) {
-          item.is_deleted = true
-          item.deleted_at = new Date().toDateString()
-        }
-      })
+      state.splice(
+        state.findIndex((item) => item.id === action.payload.id),
+        1
+      )
     }
   },
 })
