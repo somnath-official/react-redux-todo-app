@@ -24,8 +24,7 @@ const Todo = () => {
     if (searchTerm) {
       result = data.filter((todo) => {
         if (
-          todo.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          todo.description.toLowerCase().includes(searchTerm.toLowerCase())
+          todo.title.toLowerCase().includes(searchTerm.toLowerCase())
         ) return todo
       })
     }
