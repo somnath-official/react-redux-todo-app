@@ -72,3 +72,54 @@
   color: white;
   font-weight: bold;
 }
+
+.add-todo-text {
+  margin-bottom: 16px;
+  padding-bottom: 4px;
+  color: #585858;
+}
+
+.add-todo-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.add-todo-form input {
+  width: 100%;
+  outline: none;
+  border: 1px solid #bbbbbb;
+  padding: 8px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+  box-sizing: border-box;
+}
+
+.add-todo-form textarea {
+  width: 100%;
+  margin-top: 16px;
+  outline: none;
+  border: 1px solid #bbbbbb;
+  padding: 8px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+  box-sizing: border-box;
+}
+
+.add-todo-form input:focus,
+.add-todo-form textarea:focus {
+  box-shadow: 2px 2px 8px #c7cdd9;
+}
+
+.add-todo-action-container {
+  margin-top: 16px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.close-btn {
+  margin-right: 8px;
+}
